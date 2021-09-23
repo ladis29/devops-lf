@@ -3,16 +3,13 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-          DevOps-LF
-      </header>
+    <div className="App">      
+      <h1> DevOps-LF </h1>
+      <h2> Conteúdo principal</h2>
+      <h3> v1.0.0 </h3>
     </div>
   );
 }
+
 
 export default App;
