@@ -34,6 +34,6 @@ jobs:
     steps:
     - uses: actions/download-artifact@v2
       with:
-        name: deploy
+        name: package
         path: frontend/build
     - run: aws s3 cp frontend/build s3://devops-lf --recursive --acl public-read
