@@ -1,0 +1,8 @@
+---
+- name: all the options
+  s3_sync:
+    bucket: devops-lf
+    file_root: frontend/build
+    permission: public-read
+    include: "*"
+    exclude: "*"
