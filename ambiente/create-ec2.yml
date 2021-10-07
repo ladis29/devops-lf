@@ -19,7 +19,7 @@
   
   tasks:
     - name: configura bibliotecas Python
-      import_tasks: setup-python.yml  
+      import_tasks: setup-python.yml
 
     - name: Provisionamento de instância
       community.aws.ec2_instance:
