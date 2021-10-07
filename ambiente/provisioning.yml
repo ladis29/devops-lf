@@ -1,4 +1,5 @@
 ---
+- import_playbook: setup-python.yml
 - import_playbook: create-keys.yml
 - import_playbook: create-vpc.yml
 - import_playbook: create-ec2.yml
