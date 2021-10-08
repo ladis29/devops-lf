@@ -1,4 +1,4 @@
 ---
 instance_name: "{{ project_name }}-ec2"
 instance_type: t2.micro
-image_id: ami-0e341fcaad89c3650
+image_id: ami-02e136e904f3da870
