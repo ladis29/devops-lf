@@ -23,13 +23,13 @@
         force: false
       register: existing_ec2_key_result
 
-    #- name: Recuperação do conteúdo da chave privada
-    #  ansible.builtin.copy:
-    #    content: "{{ lookup('amazon.aws.aws_secret', access_key, region=aws_region) }}"
-    #    dest: "{{ playbook_dir }}/{{ access_key }}"
-    #    mode: 0600
-    #  when: existing_ec2_key_result.msg == "key pair already exists"
-    #  register: private_key
+    - name: Recuperação do conteúdo da chave privada
+      ansible.builtin.copy:
+        content: "{{ lookup('amazon.aws.aws_secret', access_key, region=aws_region) }}"
+        dest: "{{ playbook_dir }}/{{ access_key }}"
+        mode: 0600
+      when: existing_ec2_key_result.msg == "key pair already exists"
+      register: private_key
 
     - name: Criação de pares de chave
       community.crypto.openssh_keypair:
